@@ -1,0 +1,387 @@
+:root {
+  --dark-black: #181818;
+  --mid-grey: #787878;
+  --light-grey: #b2b2b2;
+  --transition-duration: 350ms;
+  --secondary-font: "Ubuntu", sans-serif;
+}
+
+
+body {
+  background-color: #181818;
+  color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #181818;
+  box-shadow: 2px 2px 6px 0px #fff4 inset, -2px -2px 6px 0px #fff4 inset;
+  border-radius: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #181818;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* =========> Loading Animation */
+
+.loading {
+  z-index: 9999999;
+}
+
+
+/* =========> Helpful Classes */
+.bg-dark-black {
+  background-color: #787878;
+}
+
+.fit-content {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* =========> Sidebar */
+
+aside {
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 999999;
+}
+
+aside nav {
+  max-width: 300px;
+  min-width: 271px;
+  position: relative;
+}
+
+nav>ul li {
+  margin-block: 500px;
+  font-size: 18px;
+  transition: background-color var(--transition-duration),
+    padding-left var(--transition-duration);
+  position: relative;
+  opacity: 0;
+}
+
+nav>ul li:hover {
+  padding-left: 20px;
+  background-color: var(--light-grey);
+}
+
+nav footer {
+  position: absolute;
+  bottom: 20px;
+}
+
+.social-links i {
+  font-size: 18px;
+
+}
+
+.social-links .facebook {
+  --color: #4267b2;
+}
+
+.social-links .twitter {
+  --color: #1d9bf0;
+}
+
+.social-links .youtube {
+  --color: #4267b2;
+}
+
+.social-links a i {
+  transition: color var(--transition-duration);
+  -webkit-transition: color var(--transition-duration);
+  -moz-transition: color var(--transition-duration);
+  -ms-transition: color var(--transition-duration);
+  -o-transition: color var(--transition-duration);
+}
+
+.social-links a:hover i {
+  color: var(--color);
+}
+
+
+.menu {
+  width: 50px;
+  /* لون ال x mark */
+  color: var(--dark-black);
+}
+
+.show-hide-icon {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.menu .icons i {
+  transition: color var(--transition-duration);
+}
+
+.menu .icons i:hover {
+  color: #d1512d;
+}
+
+.row {
+  padding-left: 50px;
+}
+
+
+.meal-layer {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f6ca;
+  top: 100%;
+  transition: .5s;
+  font-weight: 800;
+}
+
+.meal:hover .meal-layer {
+  top: 0;
+}
+
+
+.meal,
+.category {
+  border-radius: 20px;
+  /* position: relative;
+    overflow: hidden; */
+}
+
+.meal img,
+.category img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.meal .meal-info,
+.category .category-info {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: #fff9;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top var(--transition-duration);
+  cursor: pointer;
+  color: var(--dark-black);
+  -webkit-transition: top var(--transition-duration);
+  -moz-transition: top var(--transition-duration);
+  -ms-transition: top var(--transition-duration);
+  -o-transition: top var(--transition-duration);
+}
+
+.meal:hover .meal-info,
+.category:hover .category-info {
+  top: 0;
+}
+
+/* =======> Meal Details */
+
+.meal-brief .meal-name {
+  margin-top: 8px;
+}
+
+.meal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meal-details h4 i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.meal-details span {
+  display: block;
+  padding: 4px 8px;
+  background-color: #ffc23c;
+  color: var(--dark-black);
+  border-radius: 10px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.area,
+.category,
+.recipes,
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.area h4 {
+  font-size: 22px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.fa-house-laptop {
+  color: #1d9bf0;
+  cursor: pointer;
+}
+
+.sources {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-source {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #3ab0ff;
+  --bs-btn-border-color: #3ab0ff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #2495e0;
+  --bs-btn-hover-border-color: #1887d1;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+
+.btn-youtube {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ff0000;
+  --bs-btn-border-color: #ff0000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ca0606;
+  --bs-btn-hover-border-color: #b30707;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+
+.sources button a:hover {
+  color: #fff;
+}
+
+/* =======> Search */
+
+.row.search {
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.row.search+div {
+  position: relative;
+}
+
+
+.row.search ::placeholder {
+  text-align: center;
+  color: #fff !important;
+}
+
+
+input::placeholder {
+  color: white;
+}
+
+/* =======> Areas */
+
+.area-container,
+.ingredient-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: background-color var(--transition-duration);
+}
+
+.area-container:hover,
+.ingredient-container:hover {
+  cursor: url(../images/cursor2.png), auto;
+  background-color: #282828;
+}
+
+.area-name,
+.ingredient-name {
+  font-weight: 400;
+}
+
+.area-icon,
+.ingredient-icon {
+  color: #b30707;
+  font-size: 40px;
+}
+
+/* =======> Contact Us */
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form>div {
+  width: 50%;
+  padding: 10px;
+}
+
+.form>* input {
+  width: 100%;
+}
+
+.form>* label {
+  margin-bottom: 5px;
+}
+
+.form button {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 8px 30px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loading {
+  z-index: 2000;
+  display: flex;
+}

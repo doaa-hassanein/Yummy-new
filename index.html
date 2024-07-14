@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="./images/تنزيل.png" />
+
+    <link rel="stylesheet" href="./css/all.min.css">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- loading screen -->
+    <div class="loading position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center"
+        style="display: none;">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <!-- loading screen -->
+
+    <aside class="position-fixed bg-white d-flex ">
+        <nav class="bg-black h-100 text-light d-flex flex-column justify-content-between align-items-start" id="navBar">
+            <ul class="w-100 p-2 py-3">
+                <li>
+                    <a href="#" onclick="showSearchInputs() ; closeLoading()" class="text-light d-block p-2" id="search"><i
+                            class="fa-solid fa-magnifying-glass fa-fw me-2"></i>Search</a>
+                </li>
+                <li>
+                    <a href="#" onclick="getAllCategories() ;closeLoading()" class="text-light d-block p-2"
+                        id="category"><i class="fa-solid fa-tags fa-fw me-2"></i>Categories</a>
+                </li>
+                <li>
+                    <a href="#" onclick="getAllArea() ; closeLoading()" class="text-light d-block p-2" id="area"><i
+                            class="fa-solid fa-earth-americas fa-fw me-2"></i>Area</a>
+                </li>
+                <li>
+                    <a href="#" onclick="getIngredient() ; closeLoading()" class="text-light d-block p-2"
+                        id="ingredients">
+                        <i class="fa-solid fa-bowl-food fa-fw me-2"></i>Ingredients</a>
+                </li>
+                <li>
+                    <a href="#" onclick="showContact() ; closeLoading()" class="text-light d-block p-2" id="contact"><i
+                            class="fa-solid fa-address-card fa-fw me-2"></i>Contact Us</a>
+                </li>
+            </ul>
+            <footer class=" p-4">
+                <ul class="social-links d-flex ">
+                    <li>
+                        <a href="https://facebook.com" class="facebook d-block pe-1 text-white"><i
+                                class="fa-brands fa-facebook-f fa-fw"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" class="twitter d-block pe-1 text-white"><i
+                                class="fa-brands fa-twitter fa-fw"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" class="youtube d-block pe-1 text-white"><i
+                                class="fa-solid fa-globe fa-fw"></i></a>
+                    </li>
+                </ul>
+
+                <p class="copyright m-0">Copyright Â© 2019 All Rights
+                    Reserved.</p>
+            </footer>
+        </nav>
+        <div class="menu bg-white d-flex flex-column justify-content-between align-items-center p-2" id="menu">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" class="w-100" alt="Yummy Website Logo" /></a>
+            </div>
+            <i class="show-hide-icon fa-solid fa-bars" id="showHideMenu"></i>
+            <div class="icons d-flex flex-column">
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- loading page -->
+    <div
+        class="loading position-absolute start-0 end-0 top-0 bottom-0 text-white  justify-content-center align-items-center bg-black">
+
+        <i class="fa-solid fa-spinner fa-spin fa-7x"></i>
+    </div>
+    <!-- end loading -->
+
+    <section class="py-3">
+        <div class="container" id="container">
+            <div class="row py-5 g-4" id="rowData">
+
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="mx-auto w-75" id="searchContainer">
+        <div class="contact d-flex justify-content-center align-items-center">
+            <div class="container text-center">
+                <div class="row py-3">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="container">
+        <div class="row py-5 g-4 " id="rowData">
+            <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="container w-75 text-center">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input id="nameInput" onkeyup="inputsValidation()" type="text" class="form-control"
+                                placeholder="Enter Your Name">
+                            <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Special characters and numbers not allowed
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="emailInput" onkeyup="inputsValidation()" type="email" class="form-control "
+                                placeholder="Enter Your Email">
+                            <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Email not valid *exemple@yyy.zzz
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
