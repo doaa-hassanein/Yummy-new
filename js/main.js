@@ -560,7 +560,6 @@ function repasswordValidation() {
 /* search functions  */
 
 
-
 let searchContainer = document.getElementById("searchContainer");
 
 function showSearchInputs() {
