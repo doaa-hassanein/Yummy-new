@@ -568,11 +568,11 @@ function showSearchInputs() {
                 <div class="container text-center">
                     <div class="row py-3">
                         <div class="col-md-6">
-                            <input  onkeyup="searchByName()" type="text" class="form-control text-white bg-transparent"
+                            <input  onkeyup="searchByName(event)" type="text" class="form-control text-white bg-transparent"
                                 placeholder="Search By Name">
                         </div>
                         <div class="col-md-6">
-                            <input onkeyup="searchByFirstLetter()" type="text" class="form-control text-white bg-transparent"
+                            <input onkeyup="searchByFirstLetter(event)" type="text" class="form-control text-white bg-transparent"
                                 placeholder="Search By First Letter">
                         </div>
                     </div>
@@ -582,13 +582,17 @@ function showSearchInputs() {
     rowData.innerHTML = ""
 }
 
-async function searchByName(name) {
+async function searchByName(e) {
+
+    const name = e.target.value;
+
+    console.log(name);
 
     // openLoading()
 
     // rowData.innerHTML = ""
 
-    // let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
+    // let response = await fetch(https://www.themealdb.com/api/json/v1/1/search.php?s=${name})
 
     //  response = await response.json()
 
@@ -620,10 +624,15 @@ async function searchByName(name) {
 }
 
 
-async function searchByFirstLetter(letter) {
+
+async function searchByFirstLetter(e) {
+    const letter = e.target.value;
+
+    console.log(letter);
+
     try {
 
-        rowData.innerHTML = "";
+        // rowData.innerHTML = "";
         openLoading();
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(letter)}`);
         if (!response.ok) {
