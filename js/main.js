@@ -128,24 +128,23 @@ async function getAllCategories() {
 }
 
 function displayCategories(categories) {
-
     let cartoona = ``;
     for (let i = 0; i < categories.length; i++) {
         cartoona += `
         <div class="col-md-3">
-                     <div onclick="getCategoryMeals('${categories[i].strCategory}')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
-                        <img class="w-100" src="${categories[i].strCategoryThumb}" alt="" srcset="">
-                        <div class="meal-layer position-absolute d-flex align-items-center text-black fw-bolder p-2 text-center">
-                            <h3>${categories[i].strCategory}</h3> 
-                            <p>${categories[i].strCategoryDescription.split(" ").slice(0, 20).join(" ")}</p>
-                        </div>
-                    </div>
+            <div onclick="getCategoryMeals('${categories[i].strCategory}')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="${categories[i].strCategoryThumb}" alt="">
+                <div class="meal-layer position-absolute d-flex flex-column justify-content-center align-items-center text-black fw-bolder p-2 text-center">
+                    <h3>${categories[i].strCategory}</h3> 
+                    <p>${categories[i].strCategoryDescription.split(" ").slice(0, 20).join(" ")}</p>
                 </div>
+            </div>
+        </div>
         `
-
     }
-    rowData.innerHTML = cartoona
+    rowData.innerHTML = cartoona;
 }
+
 
 // لسة مخلصتش 
 // هنا هحتاج لما ادوس على ال الوجبة يجيب التفاصيل 
