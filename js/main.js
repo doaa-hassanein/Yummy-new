@@ -146,8 +146,8 @@ function displayCategories(categories) {
 }
 
 
-// لسة مخلصتش 
-// هنا هحتاج لما ادوس على ال الوجبة يجيب التفاصيل 
+
+
 async function getCategoryMeals(category) {
     rowData.innerHTML = ""
     $(".loading").fadeIn(300)
